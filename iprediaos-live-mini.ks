@@ -12,10 +12,14 @@ xconfig --startxonboot
 part / --size 4096 --fstype ext4
 services --enabled=NetworkManager,messagebus,avahi-daemon --disabled=network,sshd,iscsi,iscsid,lldpad
 
-#repo --name=rawhide --mirrorlist=http://mirrors.fedoraproject.org/mirrorlist?repo=rawhide&arch=$basearch
-repo --name=fedora --mirrorlist=http://mirrors.fedoraproject.org/mirrorlist?repo=fedora-$releasever&arch=$basearch
-repo --name=updates --mirrorlist=http://mirrors.fedoraproject.org/mirrorlist?repo=updates-released-f$releasever&arch=$basearch
-#repo --name=updates-testing --mirrorlist=http://mirrors.fedoraproject.org/mirrorlist?repo=updates-testing-f$releasever&arch=$basearch
+#repo --name=rawhide --mirrorlist=http://mirrors.ipredia.org/mirrorlist?repo=rawhide&arch=$basearch
+#repo --name=rawhide --baseurl=http://download.ipredia.org/pub/iprediaos/linux/development/rawhide/$basearch/os/
+#repo --name=iprediaos --mirrorlist=http://mirrors.ipredia.org/mirrorlist?repo=fedora-$releasever&arch=$basearch
+repo --name=iprediaos --baseurl=http://download.ipredia.org/pub/iprediaos/linux/releases/$releasever/Everything/$basearch/os/
+#repo --name=updates --mirrorlist=http://mirrors.ipredia.org/mirrorlist?repo=updates-released-f$releasever&arch=$basearch
+repo --name=updates --baseurl=http://download.ipredia.org/pub/iprediaos/linux/updates/$releasever/$basearch/
+#repo --name=updates-testing --mirrorlist=http://mirrors.ipredia.org/mirrorlist?repo=updates-testing-f$releasever&arch=$basearch
+#repo --name=updates-testing --baseurl=http://download.ipredia.org/pub/iprediaos/linux/updates/testing/$releasever/$basearch/
 
 %packages
 @base-x
