@@ -10,6 +10,8 @@
 %include iprediaos-live-minimization.ks
 
 %packages
+i2p-desktop
+
 ### LXDE desktop
 @lxde-desktop
 lxlauncher
