@@ -22,6 +22,8 @@ repo --name=updates --baseurl=http://download.ipredia.org/pub/iprediaos/linux/up
 #repo --name=updates-testing --baseurl=http://download.ipredia.org/pub/iprediaos/linux/updates/testing/$releasever/$basearch/
 
 %packages
+i2p
+
 @base-x
 @base
 @core
