@@ -7,6 +7,8 @@
 part / --size 4096
 
 %packages
+i2p-desktop
+
 @graphical-internet
 @sound-and-video
 @gnome-desktop
